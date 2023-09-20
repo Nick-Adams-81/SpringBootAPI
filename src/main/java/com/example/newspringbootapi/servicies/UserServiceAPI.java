@@ -15,8 +15,8 @@ public class UserServiceAPI implements UserService{
     private UserRepository userDao;
 
     @Override
-    public User saveUser(User user) {
-        return userDao.save(user);
+    public void saveUser(User user) {
+        userDao.save(user);
     }
 
     @Override
