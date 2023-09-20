@@ -3,6 +3,8 @@ package com.example.newspringbootapi.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -19,6 +21,17 @@ public class User {
 
     @Column
     private int age;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Posts> posts;
+
+    public List<Posts> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Posts> posts) {
+        this.posts = posts;
+    }
 
     public long getId() {
         return id;

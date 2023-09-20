@@ -25,7 +25,15 @@ public class Address {
     @Column
     private int zipCode;
 
-    @OneToOne
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    @OneToOne(optional = false)
     private User user;
 
     public int getZipCode() {
