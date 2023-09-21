@@ -33,7 +33,7 @@ public class Address {
         this.user = user;
     }
 
-    @OneToOne(optional = false)
+    @OneToOne
     private User user;
 
     public int getZipCode() {

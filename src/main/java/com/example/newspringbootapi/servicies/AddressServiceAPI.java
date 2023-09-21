@@ -14,7 +14,6 @@ public class AddressServiceAPI implements AddressService{
     @Autowired
     private AddressRepository addressDao;
 
-
     @Override
     public void saveAddress(Address address) {
         addressDao.save(address);

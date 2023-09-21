@@ -22,16 +22,16 @@ public class User {
     @Column
     private int age;
 
-    @OneToOne
-    private Address address;
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+//    @OneToOne
+//    private Address address;
+//
+//    public Address getAddress() {
+//        return address;
+//    }
+//
+//    public void setAddress(Address address) {
+//        this.address = address;
+//    }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Posts> posts;
