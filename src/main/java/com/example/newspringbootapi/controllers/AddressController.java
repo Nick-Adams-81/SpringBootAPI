@@ -39,14 +39,9 @@ public class AddressController {
     @DeleteMapping("/delete-address/{id}")
     @ResponseBody
     public String deleteAddress(@PathVariable Address id) {
-        try{
-            addressService.deleteAddress(id);
-        } catch(ErrorResponseException e) {
-            e.printStackTrace();
-        }
+        addressService.deleteAddress(id);
         return "Address deleted";
     }
-
 
 
 }
