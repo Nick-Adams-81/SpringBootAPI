@@ -8,6 +8,7 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "add_id")
     private long id;
 
     @Column
@@ -33,7 +34,7 @@ public class Address {
         this.user = user;
     }
 
-    @OneToOne
+    @OneToOne(mappedBy = "address")
     private User user;
 
     public int getZipCode() {

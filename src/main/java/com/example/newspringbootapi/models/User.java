@@ -11,6 +11,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private long id;
 
     @Column
@@ -22,16 +23,17 @@ public class User {
     @Column
     private int age;
 
-//    @OneToOne
-//    private Address address;
-//
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "fk_add_id")
+    private Address address;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Posts> posts;
