@@ -35,8 +35,7 @@ public class User {
         this.address = address;
     }
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "fk_post_id")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Posts> posts;
 
     public List<Posts> getPosts() {
