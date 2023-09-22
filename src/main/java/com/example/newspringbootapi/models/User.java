@@ -35,16 +35,16 @@ public class User {
         this.address = address;
     }
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Posts> posts;
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+//    private List<Posts> posts;
 
-    public List<Posts> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(List<Posts> posts) {
-        this.posts = posts;
-    }
+//    public List<Posts> getPosts() {
+//        return posts;
+//    }
+//
+//    public void setPosts(List<Posts> posts) {
+//        this.posts = posts;
+//    }
 
     public long getId() {
         return id;

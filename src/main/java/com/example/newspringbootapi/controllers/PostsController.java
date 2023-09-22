@@ -17,13 +17,13 @@ public class PostsController {
     @Autowired
     private PostsService postService;
 
-    @GetMapping("get-posts")
+    @GetMapping("/get-posts")
     @ResponseBody
     public List<Posts> getAllPosts() {
         return postService.getAllPosts();
     }
 
-    @PostMapping("save-post")
+    @PostMapping("/save-post")
     @ResponseBody
     public String savePost(@RequestBody Posts post) {
         postService.savePost(post);

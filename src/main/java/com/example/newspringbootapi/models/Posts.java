@@ -16,17 +16,17 @@ public class Posts {
     @Column
     private String body;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+   // @ManyToOne
+//    @JoinColumn(name = "user_id")
+//    private User user;
+//
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public String getBody() {
         return body;
