@@ -1,5 +1,6 @@
 package com.example.newspringbootapi.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -16,17 +17,18 @@ public class Posts {
     @Column
     private String body;
 
-   // @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
-//
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @JsonBackReference
+    private User user;
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public String getBody() {
         return body;

@@ -1,6 +1,7 @@
 package com.example.newspringbootapi.models;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_add_id")
+    @JsonManagedReference
     private Address address;
 
     public Address getAddress() {
@@ -35,16 +37,17 @@ public class User {
         this.address = address;
     }
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-//    private List<Posts> posts;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonManagedReference
+    private List<Posts> posts;
 
-//    public List<Posts> getPosts() {
-//        return posts;
-//    }
-//
-//    public void setPosts(List<Posts> posts) {
-//        this.posts = posts;
-//    }
+    public List<Posts> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Posts> posts) {
+        this.posts = posts;
+    }
 
     public long getId() {
         return id;

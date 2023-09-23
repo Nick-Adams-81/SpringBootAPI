@@ -1,5 +1,6 @@
 package com.example.newspringbootapi.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -35,6 +36,7 @@ public class Address {
     }
 
     @OneToOne(mappedBy = "address")
+    @JsonBackReference
     private User user;
 
     public int getZipCode() {
