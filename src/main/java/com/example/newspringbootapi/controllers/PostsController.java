@@ -21,7 +21,7 @@ public class PostsController {
         return postService.getAllPosts();
     }
 
-    @GetMapping("/get-posts/{id}")
+    @GetMapping("/get-post/{id}")
     @ResponseBody
     public Optional<Posts> getOnePost(@PathVariable long id) {
         return postService.getOnePost(id);
