@@ -23,6 +23,7 @@ public class PostsController {
         return postService.getAllPosts();
     }
 
+
     @PostMapping("/save-post")
     @ResponseBody
     public String savePost(@RequestBody Posts post) {
