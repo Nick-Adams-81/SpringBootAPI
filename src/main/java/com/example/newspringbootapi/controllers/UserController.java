@@ -5,9 +5,7 @@ import com.example.newspringbootapi.models.User;
 import com.example.newspringbootapi.repositories.UserRepository;
 import com.example.newspringbootapi.servicies.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.ErrorResponseException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +16,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
 
     @GetMapping("/get-users")
     @ResponseBody
@@ -43,7 +42,7 @@ public class UserController {
 //    @ResponseBody
 //    public User updateUser(@PathVariable long id, @RequestBody User userDetails) {
 //        Optional<User> updateUser = userService.getOneUser(id);
-//        return updateUser.orElse(userDetails);
+//
 //    }
 
     @DeleteMapping("/delete-user/{id}")
