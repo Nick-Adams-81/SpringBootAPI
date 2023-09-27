@@ -37,7 +37,7 @@ public class UserController {
         return "New User Added!";
     }
 
-    // TODO: figure out how to make put mapping work!!!
+    // TODO: figure out how to make put mapping work
 //    @PutMapping("/update-user/{id}")
 //    @ResponseBody
 //    public User updateUser(@PathVariable long id, @RequestBody User userDetails) {
@@ -51,4 +51,5 @@ public class UserController {
         userService.deleteUser(id);
         return "User Deleted";
     }
+
 }
