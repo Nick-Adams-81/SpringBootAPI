@@ -2,7 +2,6 @@ package com.example.newspringbootapi.controllers;
 
 
 import com.example.newspringbootapi.models.User;
-import com.example.newspringbootapi.repositories.UserRepository;
 import com.example.newspringbootapi.servicies.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +16,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-
     @GetMapping("/get-users")
     @ResponseBody
     public List<User> getAllUsers() {
@@ -28,6 +26,12 @@ public class UserController {
     @ResponseBody
     public Optional<User> getOneUser(@PathVariable long id) {
         return userService.getOneUser(id);
+    }
+
+    @GetMapping("/get-user-by-name/{name}")
+    @ResponseBody
+    public User getOneUserByName(@PathVariable String name) {
+        return userService.findByName(name);
     }
 
     @PostMapping("/save-user")

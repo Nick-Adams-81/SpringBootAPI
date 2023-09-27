@@ -33,4 +33,16 @@ public class UserServiceAPI implements UserService{
     public Optional<User> getOneUser(long id) {
         return userDao.findById(id);
     }
+
+    @Override
+    public List<User> findOneUserByName(String name) {
+        return null;
+    }
+
+    @Override
+    public User findByName(String name) {
+        return userDao.findByName(name);
+    }
+
+
 }
