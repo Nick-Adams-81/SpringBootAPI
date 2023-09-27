@@ -15,8 +15,6 @@ public interface UserService {
 
     Optional<User> getOneUser(long id);
 
-    List<User> findOneUserByName(String name);
-
     User findByName(String name);
 
 }
