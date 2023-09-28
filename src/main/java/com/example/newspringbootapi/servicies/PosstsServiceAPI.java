@@ -33,4 +33,9 @@ public class PosstsServiceAPI implements PostsService{
     public Optional<Posts> getOnePost(long id) {
         return postDao.findById(id);
     }
+
+    @Override
+    public Posts findByTitle(String title) {
+        return postDao.findByTitle(title);
+    }
 }

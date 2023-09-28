@@ -27,6 +27,13 @@ public class PostsController {
         return postService.getOnePost(id);
     }
 
+
+    @GetMapping("get-post-by-title/{title}")
+    @ResponseBody
+    public Posts getOnePostByTitle(@PathVariable String title) {
+        return postService.findByTitle(title);
+    }
+
     @PostMapping("/save-post")
     @ResponseBody
     public String savePost(@RequestBody Posts post) {

@@ -14,4 +14,6 @@ public interface PostsService {
     void deletePost(Posts id);
 
     Optional<Posts> getOnePost(long id);
+
+    Posts findByTitle(String title);
 }
