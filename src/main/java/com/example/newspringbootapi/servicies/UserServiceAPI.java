@@ -34,10 +34,6 @@ public class UserServiceAPI implements UserService{
         return userDao.findById(id);
     }
 
-//    @Override
-//    public List<User> findOneUserByName(String name) {
-//        return null;
-//    }
 
     @Override
     public User findByName(String name) {
