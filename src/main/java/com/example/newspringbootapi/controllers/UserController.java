@@ -1,6 +1,5 @@
 package com.example.newspringbootapi.controllers;
 
-
 import com.example.newspringbootapi.models.User;
 import com.example.newspringbootapi.servicies.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
