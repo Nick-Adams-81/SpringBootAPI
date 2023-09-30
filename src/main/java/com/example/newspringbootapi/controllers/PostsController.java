@@ -27,7 +27,6 @@ public class PostsController {
         return postService.getOnePost(id);
     }
 
-
     @GetMapping("get-post-by-title/{title}")
     @ResponseBody
     public Posts getOnePostByTitle(@PathVariable String title) {
